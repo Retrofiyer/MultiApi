@@ -37,7 +37,7 @@ jobs:
       - name: List files for debugging before deploy
         run: ls -la
         working-directory: MultiApi
-      - name: Deploy Login with Railway
+      - name: Deploy MultiApi with Railway
         run: railway up --service MultiApi
         working-directory: MultiApi
         env:
