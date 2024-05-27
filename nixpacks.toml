@@ -1,4 +1,4 @@
-nixpacks.toml
+# nixpacks.toml
 
 # Especifica las fases del proceso de construcción
 [phases.setup]
