@@ -7,8 +7,7 @@ nixPkgs = ['nodejs']  # Instala Node.js y Yarn
 [phases.install]
 cmds = ['npm install']  # Instala las dependencias del proyecto usando Yarn
 
-[phases.build]
-cmds = ['npm run build']  # Construye la aplicación de React
+
 
 # Define cómo debe iniciarse la aplicación
 [start]
