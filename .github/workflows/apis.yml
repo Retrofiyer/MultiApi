@@ -41,4 +41,4 @@ jobs:
         run: railway up --service MultiApi
         working-directory: MultiApi
         env:
-          RAILWAY_TOKEN: ${{ secrets.APIS }}
+          RAILWAY_TOKEN: ${{ secrets.APIS}}
