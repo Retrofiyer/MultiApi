@@ -21,7 +21,7 @@
         },
         {
             "src":"/pokemon",
-            "dest":"./Pokemon/js/app.js"
+            "dest":"Pokemon/js/index.js"
         },
         {
             "src":"/(.*)",
