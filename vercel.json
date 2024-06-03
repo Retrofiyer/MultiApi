@@ -29,7 +29,7 @@
       },
       {
         "src": "/marvel",
-        "dest": "/Marvel/index.js"
+        "dest": "/Marvel/index.html"
       },
       {
         "src": "/starwars/(.*)",
@@ -37,7 +37,7 @@
       },
       {
         "src": "/starwars",
-        "dest": "/StarWars/index.js"
+        "dest": "/StarWars/index.html"
       },
       {
         "src": "/pokemon/(.*)",
@@ -45,7 +45,7 @@
       },
       {
         "src": "/pokemon",
-        "dest": "/Pokemon/index.js"
+        "dest": "/Pokemon/index.html"
       },
       {
         "src": "/(.*)",
