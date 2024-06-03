@@ -1,44 +1,42 @@
-name: Deployment MultiApi
+name: Deploy to Vercel
 
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          repository: ${{ github.repository }}
-          path: MultiApi
-      - name: List files for debugging
-        run: ls -la
-        working-directory: MultiApi
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 16.6.0
-      - run: npm install
-        working-directory: MultiApi
-  
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+        
   deploy:
     needs: build
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          repository: ${{ github.repository }}
-          path: MultiApi
-      - name: Install Railway
-        run: npm i -g @railway/cli
-        working-directory: MultiApi
-      - name: List files for debugging before deploy
-        run: ls -la
-        working-directory: MultiApi
-      - name: Deploy with Railway
-        run: railway up --service MultiApi
-        working-directory: MultiApi
+          node-version: '18'
+
+      - name: Deploy to Vercel
         env:
-          RAILWAY_TOKEN: ${{ secrets.APIS}}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npm install -g vercel
+          vercel --prod --token=$VERCEL_TOKEN

@@ -1,0 +1,31 @@
+{
+    "version": 2,
+    "builds": [
+        {
+          "src":"./app.js",
+          "use":"@vercel/node"
+        },
+        {
+          "src":"./index.html",
+          "use":"@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src":"/marvel",
+            "dest":"app.js"
+        },
+        {
+            "src":"/starwars",
+            "dest":"app.js"
+        },
+        {
+            "src":"/pokemon",
+            "dest":"app.js"
+        },
+        {
+            "src":"/(.*)",
+            "dest":"/index.html"
+        }
+    ]
+}
