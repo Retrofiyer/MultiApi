@@ -8,9 +8,20 @@
     ],
     "routes": [
       {
+        "src": "/marvel/(.*)",
+        "dest": "/Marvel/index.js"
+      },
+      {
+        "src": "/starwars/(.*)",
+        "dest": "/StarWars/index.js"
+      },
+      {
+        "src": "/pokemon/(.*)",
+        "dest": "/Pokemon/index.js"
+      },
+      {
         "src": "/(.*)",
-        "dest": "index.js"
+        "dest": "/index.js"
       }
     ]
-  }
-  
+  }  
