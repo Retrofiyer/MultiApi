@@ -13,15 +13,15 @@
     "routes": [
         {
             "src":"/marvel",
-            "dest":"index.js"
+            "dest":"Marvel/index.js"
         },
         {
             "src":"/starwars",
-            "dest":"index.js"
+            "dest":"StarWars/index.js"
         },
         {
             "src":"/pokemon",
-            "dest":"Pokemon/js/index.js"
+            "dest":"Pokemon/index.js"
         },
         {
             "src":"/(.*)",
