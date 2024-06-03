@@ -8,6 +8,18 @@
       {
         "src": "./index.html",
         "use": "@vercel/static"
+      },
+      {
+        "src": "./Marvel/index.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "./StarWars/index.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "./Pokemon/index.js",
+        "use": "@vercel/node"
       }
     ],
     "routes": [
@@ -16,24 +28,24 @@
         "dest": "/Marvel/index.js"
       },
       {
-        "src":"/marvel",
-        "dest":"index.js"
+        "src": "/marvel",
+        "dest": "/Marvel/index.js"
       },
       {
         "src": "/starwars/(.*)",
         "dest": "/StarWars/index.js"
       },
       {
-        "src":"/starwars",
-        "dest":"index.js"
+        "src": "/starwars",
+        "dest": "/StarWars/index.js"
       },
       {
         "src": "/pokemon/(.*)",
         "dest": "/Pokemon/index.js"
       },
       {
-        "src":"/pokemon",
-        "dest":"index.js"
+        "src": "/pokemon",
+        "dest": "/Pokemon/index.js"
       },
       {
         "src": "/(.*)",
